@@ -15,10 +15,20 @@ module.exports = {
   parserOptions: {
     ecmaVersion: "latest",
     sourceType: "module",
+    settings: {
+      react: {
+        version: "detect",
+      },
+    },
   },
   plugins: ["react", "@typescript-eslint"],
   rules: {
     "@typescript-eslint/no-unused-vars": "error",
   },
-  ignorePatterns: ["node_modules", ".prettierrc.js", ".eslintrc.js", "App.tsx"],
+  ignorePatterns: [
+    "node_modules",
+    ".prettierrc.js",
+    ".eslintrc.js",
+    "index.css",
+  ],
 };
