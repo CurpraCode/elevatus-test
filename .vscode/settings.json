@@ -8,5 +8,6 @@
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "ms-vsliveshare.vsliveshare"
-  }
+  },
+  "cSpell.words": ["Jober"]
 }
