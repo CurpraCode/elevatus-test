@@ -12,12 +12,13 @@ import {
 import React, { FC, useState } from "react";
 import { Search } from "./Search";
 import JobInterface from "../interface/job.interface";
+// import parse from "html-react-parser";
 
 const Jober: FC<JobInterface> = (props) => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [jobShow, setJobShow] = useState(props.jobs);
   const [searchText, setSearchText] = useState("");
-  console.log(jobShow);
+  // console.log(jobShow);
   // const jobArr = jobShow.job;
   const filterInitialState = {
     title: "",
@@ -61,11 +62,13 @@ const Jober: FC<JobInterface> = (props) => {
               </CardHeader>
               <CardBody>
                 <Text>{data.location.country}</Text>
-                <Text>{data.career_level ? data.career_level : `N/A`}</Text>
-                <Text>{data.requirement}</Text>
+                <Text>
+                  {data.career_level ? data.career_level || "N/A" : "N/A"}
+                </Text>
+                {/* <ul>{parse(data.requirements)}</ul> */}
               </CardBody>
               <CardFooter>
-                <Button>View here</Button>
+                <Button>View Details</Button>
               </CardFooter>
             </Card>
           ))}

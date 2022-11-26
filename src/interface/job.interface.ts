@@ -15,7 +15,7 @@ export interface Job {
   salary: Record<string, unknown>;
   outside_key: null;
   posted_at: string;
-  requirement: string;
+  requirements: string;
   outside: boolean;
   nationality: [];
   major: [];
